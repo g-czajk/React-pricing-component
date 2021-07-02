@@ -1,0 +1,114 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.3s;
+    .title {
+        display: flex;
+        margin-bottom: 32px;
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 16px;
+            svg {
+                font-size: 40px;
+                color: map-get($colors, mainDark);
+            }
+        }
+        h2 {
+            line-height: 40px;
+            font-size: 32px;
+            font-weight: 700;
+            color: map-get($colors, mainDark);
+        }
+    }
+    .features-intro {
+        font-size: 22px;
+        font-weight: 400;
+        color: map-get($colors, textGrey);
+    }
+    .features {
+        padding-bottom: 16px;
+        border-bottom: 1px dashed map-get($colors, textGrey);
+        .feature {
+            display: flex;
+            margin-top: 24px;
+            span {
+                margin-right: 8px;
+                svg {
+                    font-size: 24px;
+                    color: map-get($colors, textDark);
+                }
+            }
+            p {
+                font-size: 18px;
+                color: map-get($colors, textDark);
+                font-weight: 400;
+            }
+        }
+    }
+    .price {
+        margin-top: auto;
+        margin-bottom: 24px;
+        p {
+            font-size: 32px;
+            font-weight: 700;
+            color: map-get($colors, mainDark);
+            span {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+    button {
+        border: none;
+        border-radius: 12px;
+        padding: 12px 0;
+        font-family: $font-family;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 40px;
+        color: map-get($colors, pinkDark);
+        background-color: map-get($colors, pinkLight);
+        cursor: pointer;
+    }
+    &.active {
+        transform: translateY(-40px);
+        margin: 0 24px;
+        background-color: map-get($colors, mainDark);
+        .title {
+            span {
+                svg {
+                    color: map-get($colors, mainLight);
+                }
+            }
+            h2 {
+                color: map-get($colors, mainLight);
+            }
+        }
+        .features {
+            .feature {
+                span {
+                    svg {
+                        color: map-get($colors, mainLight);
+                    }
+                }
+                p {
+                    color: map-get($colors, mainLight);
+                }
+            }
+        }
+        .price {
+            p {
+                color: map-get($colors, mainLight);
+            }
+        }
+        button {
+            color: map-get($colors, pinkLight);
+            background-color: map-get($colors, pinkDark);
+        }
+    }
+}
